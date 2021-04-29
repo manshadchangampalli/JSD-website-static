@@ -356,7 +356,8 @@ h1,h2,h3,h4{
 	background-color: var(--darkViolet);
 	color: #fff;
 	text-align: center;
-	padding-top: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 .card-container h1 {
 	font-size: 3rem;
