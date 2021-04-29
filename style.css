@@ -397,3 +397,135 @@ h1,h2,h3,h4{
     flex-direction: column;
 }
 /* Card container styles end */
+
+
+/* About containe styles starts */
+.about-container{
+	width: 100%;
+	display: flex;
+	padding: 5rem;
+}
+.about {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem 6rem;
+	padding-right: 15rem;
+}
+.about-container .image {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.about p {
+	font-family: var(--poppins);
+	font-size: 1.1rem;
+	margin-top: 2rem;
+	color: #494c5e;
+	letter-spacing: 1.1px;
+	line-height: 2.1;
+}
+.about h2 {
+	font-size: 4rem;
+	color: #494c5e;
+}
+@media only screen and (max-width:1400px){
+	.about {
+		padding: 0;
+		padding-right: 6rem;
+	}
+}
+@media only screen and (max-width : 1000px){
+	.about-container img{
+		width: 23rem;
+	}
+	.about p {
+		margin-top: 1rem;
+		font-size: 1rem;
+		letter-spacing: 1.1px;
+		line-height: 1.9;
+	}
+	.about h2 {
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width: 870px){
+	.about-container {
+		width: 100%;
+		display: flex;
+		padding: 2rem;
+	}
+}
+/* About container styles end */
+
+/* Gallery style starts */
+.gallery-container {
+	width: 100%;
+	padding: 3rem 11rem;
+}
+.gallery-container h2 {
+	font-size: 4rem;
+	color: #494c5e;
+	margin-bottom: 2rem;
+}
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 23px;
+}
+.gallery-image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.gallery-item-1{
+	grid-row-start: 1 ;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.gallery-item-2{
+	grid-row-start: 1 ;
+	grid-row-end: 2;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+.gallery-item-3{
+	grid-row-start: 2 ;
+	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+.gallery-item-4{
+	grid-row-start: 3 ;
+	grid-row-end: 5;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.gallery-item-5{
+	grid-row-start: 2 ;
+	grid-row-end: 4;
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+@media only screen and (max-width: 1400px){
+	.gallery-container {
+		width: 100%;
+		padding: 3rem 5rem;
+	}
+}
+@media only screen and (max-width: 1000px){
+	.gallery-container h2 {
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width : 870px){
+	.gallery-container {
+		width: 100%;
+		padding: 1rem 2rem;
+	}
+}
+/* Gallery style ends */
