@@ -82,6 +82,9 @@ h1,h2,h3,h4{
 .nav-close{
 	display: none;
 }
+.nav-responsive > i{
+	display: none;
+}
 @media only screen and (max-width: 1400px){
     .circle-big {
         width: 51rem;
@@ -139,6 +142,9 @@ h1,h2,h3,h4{
 	}
 	.social-media {
 		margin-bottom: auto;
+	}
+	.nav-responsive > i{
+		display: block;
 	}
 	.nav-toggle{
 		display: block;
