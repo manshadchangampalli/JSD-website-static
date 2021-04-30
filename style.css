@@ -126,6 +126,7 @@ h1,h2,h3,h4{
 	.nav-toggle{
 		display: block;
 		cursor: pointer;
+		padding: 1rem;
 	}
 	.nav-active{
 		transform: translate(0);
