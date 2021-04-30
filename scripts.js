@@ -1,16 +1,13 @@
 const navSlide = () =>{
     const nav = document.querySelector('#toggle')
     const navResponse = document.querySelector('.nav-responsive')
-    const header = document.querySelector('.container-header')
+    const navClose = document.querySelector('.nav-close')
+
     nav.addEventListener('click',() => {
         navResponse.classList.toggle('nav-active')
-        if($(window).scrollTop() < 60){
-            if(header.style.backgroundColor == ""){
-                header.style.backgroundColor = "#fff"
-            }else{
-                header.style.backgroundColor = ""
-            }
-        }
+    })
+    navClose.addEventListener('click',() => {
+        navResponse.classList.toggle('nav-active')
     })
 }
 navSlide();
