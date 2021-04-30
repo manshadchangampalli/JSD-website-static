@@ -24,11 +24,12 @@ h1,h2,h3,h4{
 
 
 /* Header styles */
-.container-header{
-    width: 100%;
-    padding: 0.5rem 5rem;
-    display: flex;
-    position: fixed;
+.container-header {
+	width: 100%;
+	padding: 0.5rem 5rem;
+	display: flex;
+	position: fixed;
+	z-index: 100;
 }
 .nav-responsive{
     display: flex;
@@ -85,77 +86,7 @@ h1,h2,h3,h4{
     }
 }
 @media only screen and (max-width: 768px){
-    .container-header {
-        width: 100%;
-        padding: 0.6rem 2rem;
-        justify-content: space-between;
-        position: relative;
-    }
-    .nav-toggle{
-        background-color: #c4c4c438;
-        border-radius: 10rem;
-        margin: 0.5rem;
-        padding: 0.2rem;
-        color: #fff;
-        position: relative;
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-    }
-    .toggle-icon{
-        font-size: 1.8rem;
-        position: absolute;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%,-50%);
-    }
-    .nav-responsive {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        height: 100vh;
-        z-index: 1;
-        right: 0;
-        top: 67px;
-        width: 100%;
-        transform: translateX(100%);
-        transition: all .3s ease-in-out;
-        animation: navMenuAnimationOut 0.5s forwards 0.2s;
-    }
-    .active{
-        animation: navMenuAnimationIn 0.5s forwards 0.2s;
-    }
-    @keyframes navMenuAnimationIn{
-        to{
-            transform: translateX(0);
-        } 
-    }
-    @keyframes navMenuAnimationOut{
-        from{
-            transform: translateX(0);
-        }
-        to{
-            transform: translateX(100%);
-        } 
-    }
-    .nav-menu {
-        list-style: none;
-        display: flex;
-        font-family: var(--poppins);
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 500;
-        justify-content: center;
-        height: 90%;
-        justify-content: space-around;
-    }
-    .social-media{
-        justify-content: center;
-        display: flex;
-    }
+    
 }
 
 
@@ -559,6 +490,12 @@ h1,h2,h3,h4{
 		.about {
 			width: 100%;
 		}
+		.about p {
+			margin-top: 1rem;
+			font-size: 0.8rem;
+			letter-spacing: 1.1px;
+			line-height: 1.9;
+		}
 	}
 }
 /* About container styles end */
@@ -647,22 +584,22 @@ h1,h2,h3,h4{
 	background-color: var(--darkViolet);
 	color: #fff;
 	display: flex;
-	padding: 4rem;
+	padding: 3rem;
 }
 .made-easy {
 	width: 50%;
-	padding: 7rem;
+	padding: 7rem 10rem;
 }
 .contact-container form {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
-	padding: 7rem;
+	padding: 7rem 10rem;
 }
 .contact-container form > input, .contact-container form textarea {
 	border: none;
 	background: none;
-	border-bottom: 2px solid #ffffff94;
+	border-bottom: 2px solid #fff;
 	margin-bottom: 2rem;
 	padding: 0.5rem 1rem;
 	resize: none;
@@ -680,6 +617,9 @@ h1,h2,h3,h4{
 .made-easy h2 {
 	font-size: 3rem;
 }
+.contact-container h1{
+	display: none;
+}
 form button {
 	border: none;
 	background-color: #fff;
@@ -688,5 +628,95 @@ form button {
 	border-radius: 10px;
 	font-size: 1rem;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+form button:hover{
+	background-color: rgb(235, 229, 229);
+}
+@media only screen and (max-width: 1440px){
+	.made-easy {
+		padding: 7rem 6rem;
+	}
+	.contact-container form {
+		padding: 7rem;
+	}
+}
+@media only screen and (max-width:1200px){
+	.contact-container form {
+		padding: 4rem;
+	}
+	.made-easy {
+		padding: 4rem;
+	}
+	.made-easy h2 {
+		font-size: 2rem;
+	}
+}
+@media only screen and (max-width:960px){
+	.contact-container form {
+		padding: 2rem;
+	}
+	.made-easy {
+		padding: 2rem;
+	}
+	.made-easy h2 {
+		font-size: 2rem;
+	}
+}
+@media only screen and (max-width:740px){
+	.made-easy p {
+		margin-top: 1rem;
+		font-size: .9rem;
+	}
+	.contact-container {
+		padding: 1rem;
+	}
+	form button {
+		width: 8rem;
+		height: 3rem;
+		font-size: .9rem;
+	}
+	.contact-container form > input, .contact-container form textarea {
+		margin-bottom: 1.2rem;
+		padding: 0.5rem .5rem;
+	}
+}
+@media only screen and (max-width: 630px){
+	.contact-container h1{
+		display: block;
+	}
+	.made-easy{
+		display: none;
+	}
+	.contact-container {
+		padding: 1rem;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+	.contact-container form {
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 420px){
+	form button {
+		width: 7rem;
+		height: 2.5rem;
+		font-size: .9rem;
+		border-radius: 5px;
+	}
+	.contact-container form {
+		width: 90%;
+		padding: 0.2rem;
+	}
 }
 /* Contact style ends */
+
+/* Footer section styles starts */
+.footer-container{
+	width: 100%;
+	height: 20rem;
+	background-color: var(--footerBlack);
+}
+/* Footer section styles ends */
