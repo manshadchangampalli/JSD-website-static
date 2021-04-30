@@ -21,7 +21,10 @@ h1,h2,h3,h4{
   --darkViolet : #5928e5;
   --footerBlack : #0b0d17;
 }
-
+::placeholder{
+	color: #fff;
+	opacity: 0.95;
+}
 
 /* Header styles */
 .container-header {
