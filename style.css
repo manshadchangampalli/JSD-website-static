@@ -77,7 +77,7 @@ h1,h2,h3,h4{
     display: none;
 }
 .header-active{
-	background-color: rgba(255, 255, 255, 0.746);
+	background-color: rgba(255, 255, 255, 1);
 }
 .nav-close{
 	display: none;
