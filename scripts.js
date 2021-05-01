@@ -21,3 +21,5 @@ $(window).on("scroll", function() {
        $(".social-link").removeClass("social-link-active")
     }
 });
+
+ScrollReveal({ reset: true }).reveal('.timeline-item').delay(1000);

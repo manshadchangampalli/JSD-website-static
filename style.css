@@ -20,6 +20,8 @@ h1,h2,h3,h4{
   --manrope : 'Manrope', sans-serif;
   --darkViolet : #5928e5;
   --footerBlack : #0b0d17;
+  --timelineDot: greenyellow;
+  --timelineDotHover: yellow;
 }
 ::placeholder{
 	color: #fff;
